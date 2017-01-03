@@ -1,0 +1,49 @@
+/* The navigation bar :
+To create a fixed top menu, use position:fixed and top:0. Note that the fixed menu will overlay your other content. 
+To fix this, add a margin-top (to the content) that is equal or larger than the height of your menu.
+*/
+
+body {
+	margin:0;
+    background-color: lightblue;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+p {
+    font-family: verdana;
+    font-size: 20px;
+}
+
+ul {
+    list-style-type: none;
+    list-style-position:outside;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+}
+
+/* Main content */
+.main {
+	padding: 16px;
+    margin-top: 30px; /* Add a top margin to avoid content overlay */
+}
+

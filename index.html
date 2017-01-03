@@ -1,0 +1,192 @@
+<!DOCTYPE html>  
+<html lang="en-US">
+	<head>  
+		<meta charset="UTF-8">
+		<title>New Website | Portfolio</title>  
+		<link rel="stylesheet" href="css/normalize.css">
+	    <link rel="stylesheet" href="css/main.css">
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700" rel="stylesheet">
+	</head>  
+	<body>  
+	<header>
+		<div>
+			<nav>
+			<!-- http://www.w3schools.com/howto/howto_css_fixed_menu.asp -->
+			<ul>
+			  <li><a href="#home">Home</a></li>
+			  <li><a href="#boxes">Boxes</a></li>
+			  <li><a href="#news">News</a></li>
+			  <li><a href="#contact">Contact</a></li>
+			</ul>
+			</nav>
+		</div>
+		
+		<div class="main">
+		  <p>Some text some text some text some text..</p>
+		    <h1>Fixed Top Menu</h1>
+  			<h2>Javascript in HTML Canvas</h2>
+			<p>Some text some text some text some text..</p>
+		</div>
+	</header>	
+	
+	<main>		
+			
+		<section id="boxes">
+		<div class="full-width">
+
+			<!-- http://www.w3resource.com/html5-canvas/ -->
+			<div style="margin-left:30px;">  
+			<canvas id="myCanvasTag1" width="200" height="200" style="border: 10px blue solid">  
+			</canvas>  
+			<canvas id="myCanvasTag2" width="200" height="200" style="border: 10px green solid">  
+			</canvas>  
+			<canvas id="myCanvasTag3" width="200" height="200" style="border: 10px red solid">  
+			</canvas>  
+			<canvas id="myCanvasTag4" width="200" height="200" style="border: 10px black solid">  
+			</canvas> <br />
+			<canvas id="myCanvasTag5" width="200" height="200" style="border: 10px white solid">  
+			</canvas>  
+			<canvas id="myCanvasTag6" width="200" height="200" style="border: 10px white solid">  
+			</canvas>
+			<canvas id="myCanvasTag7" width="200" height="200" style="border: 10px white solid">  
+			</canvas>
+			<canvas id="myCanvasTag8" width="200" height="200" style="border: 10px white solid">  
+			</canvas> <br />
+			<canvas id="myCanvasTag9" width="200" height="200" style="border: 10px black solid">  
+			</canvas>
+			<br /><br />  
+			<a href="index.html">back</a>  
+			 			
+			</div> 
+		</div> 
+		</section>
+
+		<script type="text/javascript" src="script.js"></script> 
+	</main>
+	<i class="fa fa-twitter" style="font-size:60px;color:lightblue;text-shadow:2px 2px 4px #000000;"></i>   
+
+	</body>  
+</html>  
+
+
+<!--
+
+http://www.w3schools.com/css/css_rwd_templates.asp
+http://www.w3schools.com/css/css_examples.asp
+
+http://www.w3schools.com/icons/default.asp
+http://fontawesome.io/icons/
+http://fontawesome.io/icon/twitter/
+http://fontawesome.io/examples/
+
+<i class="fa fa-twitter" aria-hidden="true"></i>
+Note: to improve web accessibility, we recommend using aria-hidden="true" to hide icons used purely for decoration.
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Font Awesome Icons</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<i class="fa fa-twitter" style="font-size:60px;color:lightblue;text-shadow:2px 2px 4px #000000;"></i>   
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<title>HTML5 Canvas Demo</title>  
+<style>  
+#FirstCanvas{  
+width: 500px;  
+height: 300px;  
+border: 3px solid green;  
+background-color: orange;  
+}  
+</style>  
+</head>  
+<body>  
+<canvas id="FirstCanvas"></canvas>  
+</body>  
+</html> 
+
+
+
+
+
+<!doctype html>  
+<html>  
+  <head>  
+    <meta charset="UTF-8" />  
+    <title>Basic Animation with Canvas example</title>  
+  </head>  
+<body>  
+        <canvas id="canvas" width="400" height="300">  
+         If you can see this, your browser does not support Canvas  
+        </canvas>  
+<script>  
+var canvas;    
+var ctx;  
+var x = 400;  
+var y = 300;  
+var dx = 2;  
+var dy = 4;  
+var width = 400;  
+var height = 300;   
+  
+function circle(x,y,r) {  
+  ctx.beginPath();  
+  ctx.arc(x, y, r, 0, Math.PI*2, true);  
+  ctx.fill();  
+}  
+  
+function rect(x,y,w,h) {  
+  ctx.beginPath();  
+  ctx.rect(x,y,w,h);  
+  ctx.closePath();  
+  ctx.fill();  
+}  
+  
+   
+function reset() {  
+  ctx.clearRect(0, 0, width, height);  
+}  
+  
+function init() {  
+  canvas = document.getElementById("canvas");  
+  ctx = canvas.getContext("2d");  
+  return setInterval(animate, 10);  
+}  
+  
+  
+function animate() {  
+  reset();  
+  ctx.fillStyle = "#FAF7F8";  
+  rect(0,0,width,height);  
+  ctx.fillStyle = "#444444";  
+  circle(x, y, 10);  
+  
+  if (x + dx > width || x + dx < 0)  
+    dx = -dx;  
+  if (y + dy > height || y + dy < 0)  
+    dy = -dy;  
+  
+  x += dx;  
+  y += dy;  
+}  
+  
+init();  
+</script>  
+</body>  
+</html>  
+
+
+-->
