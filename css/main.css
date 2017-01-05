@@ -8,9 +8,36 @@ body {
     background-color: lightblue;
 }
 
-h1 {
-    color: white;
-    text-align: center;
+h1{
+	letter-spacing: 3px;
+	text-align: center; 
+	font-size: 32px;
+	text-transform: Uppercase;
+	font-style:  full-width; 
+}
+div-html {
+	padding: 10px;
+	margin: 10px;
+	width: 200px;
+	height: 200px;
+	border: 1px solid #4593FE;
+	float: left;
+}
+.one {
+	background: #0FA5A0;
+}
+.two {
+	background: #7376A1;
+}
+.three {
+	background: #2B3648;
+}
+
+.yellow-text {
+	color: #E0F371;
+}
+.white-text {
+	color: #F7FFFB;
 }
 
 p {
