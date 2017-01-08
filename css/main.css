@@ -15,29 +15,15 @@ h1{
 	text-transform: Uppercase;
 	font-style:  full-width; 
 }
+div {
+	
+}
 div-html {
-	padding: 10px;
-	margin: 10px;
+	margin-right: 5px;
 	width: 200px;
 	height: 200px;
-	border: 1px solid #4593FE;
+	border: 10px solid #4593FE;
 	float: left;
-}
-.one {
-	background: #0FA5A0;
-}
-.two {
-	background: #7376A1;
-}
-.three {
-	background: #2B3648;
-}
-
-.yellow-text {
-	color: #E0F371;
-}
-.white-text {
-	color: #F7FFFB;
 }
 
 p {
@@ -72,5 +58,22 @@ li a {
 .main {
 	padding: 16px;
     margin-top: 30px; /* Add a top margin to avoid content overlay */
+}
+
+.one {
+	background: #0FA5A0;
+}
+.two {
+	background: #7376A1;
+}
+.three {
+	background: #2B3648;
+}
+
+.yellow-text {
+	color: #E0F371;
+}
+.white-text {
+	color: #F7FFFB;
 }
 

@@ -2,36 +2,24 @@
  // http://www.w3resource.com/html5-canvas/
  
   window.onload=function() {  
-    var mycontext1=document.getElementById("myCanvasTag1").getContext('2d');  
-    var mycontext2=document.getElementById("myCanvasTag2").getContext('2d');  
-    var mycontext3=document.getElementById("myCanvasTag3").getContext('2d');  
-    var mycontext4=document.getElementById("myCanvasTag4").getContext('2d');           
-    // gradient 1  
+
+// HTML5 Canvas, Gradient, Example #1
+    var mycontext1=document.getElementById("myCanvasTag1").getContext('2d');   
     var mygradient1=mycontext1.createLinearGradient(30,30,90,90);             
-    mygradient1.addColorStop(0,"#FF0000");  
-    mygradient1.addColorStop(1,"#00FF00");  
+    mygradient1.addColorStop(0,"#0000FF");  
+    mygradient1.addColorStop(.5,"#00FFDD");  
     mycontext1.fillStyle=mygradient1;  
     mycontext1.fillRect(0,0,200,200);  
-    // gradient 2     
+  
+// HTML5 Canvas, Gradient, Example #2  
+    var mycontext2=document.getElementById("myCanvasTag2").getContext('2d');      
     var mygradient2=mycontext2.createLinearGradient(30,30,90,90);             
-    mygradient2.addColorStop(1,"#FF0000");  
-    mygradient2.addColorStop(0,"#00FF00");  
+    mygradient2.addColorStop(0,"#DD33CC");  
+    mygradient2.addColorStop(1,"#EEEEEE");  
     mycontext2.fillStyle=mygradient2;  
     mycontext2.fillRect(0,0,200,200);  
-  
-    var mygradient3=mycontext3.createLinearGradient(30,30,90,90);             
-    mygradient3.addColorStop(0,"#0000FF");  
-    mygradient3.addColorStop(.5,"#00FFDD");  
-    mycontext3.fillStyle=mygradient3;  
-    mycontext3.fillRect(0,0,200,200);  
-  
-    var mygradient4=mycontext1.createLinearGradient(30,30,90,90);             
-    mygradient4.addColorStop(0,"#DD33CC");  
-    mygradient4.addColorStop(1,"#EEEEEE");  
-    mycontext4.fillStyle=mygradient4;  
-    mycontext4.fillRect(0,0,200,200);  
-    
-// HTML5 Canvas Example #5
+
+// HTML5 Canvas, Boxes in Boxes, Example #5
    var w3rcanvas=document.getElementById("myCanvasTag5");  
    var w3rcontext=w3rcanvas.getContext('2d');  
    w3rcontext.fillStyle='rgb(0,0,255)'; //Sets the color used for filling an area   
@@ -81,59 +69,7 @@
    context4.textAlign="center";  
    context4.fillText("&",100,100);//sets text to be rendered 
    
-// HTML5 Canvas Text, Basic Animation with Canvas example, Example #10
 
-	var canvas3;    
-	var ctx;  
-	var x = 400;  
-	var y = 300;  
-	var dx = 2;  
-	var dy = 4;  
-	var width = 400;  
-	var height = 300;   
-  
-	function circle(x,y,r) {  
-	  ctx.beginPath();  
-	  ctx.arc(x, y, r, 0, Math.PI*2, true);  
-	  ctx.fill();  
-	}  
-  
-	function rect(x,y,w,h) {  
-	  ctx.beginPath();  
-	  ctx.rect(x,y,w,h);  
-	  ctx.closePath();  
-	  ctx.fill();  
-	}  
-  
-   
-	function reset() {  
-	  ctx.clearRect(0, 0, width, height);  
-	}  
-  
-	function init() {  
-	  canvas3 = document.getElementById("myCanvasTag10");  
-	  ctx = myCanvasTag10.getContext("2d");  
-	  return setInterval(animate, 10);  
-	}  
-  
-  
-	function animate() {  
-	  reset();  
-	  ctx.fillStyle = "#FAF7F8";  
-	  rect(0,0,width,height);  
-	  ctx.fillStyle = "#444444";  
-	  circle(x, y, 10);  
-  
-	  if (x + dx > width || x + dx < 0)  
-		dx = -dx;  
-	  if (y + dy > height || y + dy < 0)  
-		dy = -dy;  
-  
-	  x += dx;  
-	  y += dy;  
-	}  
-  
-	init();  
 	
 // HTML5 Container #1, Slideshow
 	
